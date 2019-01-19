@@ -86,6 +86,15 @@ var legend = {
 	hobbies: ["martial arts", "fitness", "dancing", "knitting", "coding"]
 };
 
+function printValuesArray (obj) {
+	var keyArray =[];
+	for (var i in obj) {
+		keyArray.push(obj[i]);
+	}
+	return keyArray
+}
+
+console.log("#4:",printValuesArray(legend));
 
 /*5. Create a function that will take in an object and will return the number of properties (key -value pairs) in the object. Use the legend object above.
 
