@@ -120,13 +120,33 @@ function objKeyCounter2 (obj) {
 	return Object.keys(obj).length
 }
 
-console.log(objKeyCounter(prepClass));
-console.log(objKeyCounter2(prepClass));
+console.log("#5:", objKeyCounter(prepClass));
+console.log("#5:", objKeyCounter2(prepClass));
 
 /*6. Create a function that will take in an object and check to see if the legend object has a property of 'occupation'.*/
 
 /*@param {Object}
 @return {Object}*/
+
+function occupationCheck (obj) {
+	if (Object.keys(obj).indexOf("occupation") >=0) {
+		return true
+	} else {
+		return false
+	}
+}
+
+function occupationCheck2 (obj) {
+	for (var i in obj) {
+		if (obj.hasOwnProperty("occupation")=== true) {
+			return true;
+		}
+	}
+	return false;
+}
+
+console.log("#6:", occupationCheck(legend));
+console.log("#6:", occupationCheck2(legend));
 
 
 
