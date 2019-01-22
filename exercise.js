@@ -105,7 +105,23 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 /*@param {Object}
 @return {Number}*/
 
+function objKeyCounter (obj) {
+	var counter = 0;
+	for (var i in obj) {
+		if (obj.hasOwnProperty(i) === true) {
+			counter ++;
+		}
 
+	}
+	return counter;
+}
+
+function objKeyCounter2 (obj) {
+	return Object.keys(obj).length
+}
+
+console.log(objKeyCounter(prepClass));
+console.log(objKeyCounter2(prepClass));
 
 /*6. Create a function that will take in an object and check to see if the legend object has a property of 'occupation'.*/
 
